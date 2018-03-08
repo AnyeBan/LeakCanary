@@ -6,7 +6,7 @@ http://www.jb51.net/article/97694.htm
 
 加入LeakCanary只需要3步骤
 
-1,添加依赖
+1.添加依赖
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
@@ -19,14 +19,17 @@ dependencies {
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 }
 
-MyApplication,并且在manifest里声明
+2.创建MyApplication,并且在manifest里声明
 
-  <application
+    <application
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemecart">
         
-3在MyApplication里初始化
+3.在MyApplication里初始化
 
 public class MyApplication extends Application {
 
